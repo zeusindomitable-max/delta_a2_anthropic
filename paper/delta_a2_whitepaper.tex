@@ -1,0 +1,26 @@
+\
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\title{Δa₂ Introspection Correlation: A Practical Metric for Early Representational Drift Detection}
+\author{Zeus Indomitable}
+\date{2025}
+\begin{document}
+\maketitle
+\begin{abstract}
+We introduce Δa₂, a scalar probe computed from activation covariance curvature, as a candidate early-warning signal for internal representational drift in large language models. We describe a reproducible evaluation pipeline and provide synthetic results demonstrating correlation with simulated detection.
+\end{abstract}
+\section{Introduction}
+Motivation, related work, and the need for representational side-channels in alignment evaluation.
+\section{Metric Definition}
+Given activation matrix $h\in\mathbb{R}^{s\times d}$, compute covariance $C=\mathrm{Cov}(h)$ and define
+\begin{equation}
+a_2 = \frac{\operatorname{tr}(C^2)}{d},\quad \Delta a_2 = a_2^{post}-a_2^{pre}.
+\end{equation}
+\section{Experiments}
+Describe synthetic injection experiments and model-backed protocol.
+\section{Discussion and Limitations}
+Calibration per architecture; interpret as signal, not verdict.
+\section{Conclusion}
+Δa₂ is a promising complement to output-level detectors and merits institutional evaluation.
+\end{document}
